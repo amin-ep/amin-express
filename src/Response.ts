@@ -23,4 +23,10 @@ export class Response {
       this.res.end(data);
     }
   }
+
+  redirect(path: string, statusCode?: number) {
+    this.res.statusCode = statusCode || 302;
+    this.res.setHeader('Location', path);
+    this.res.end();
+  }
 }

@@ -1,9 +1,9 @@
-import { IncomingMessage, ServerResponse } from "http";
+import { IncomingMessage, ServerResponse } from 'http';
 
-export type Query = { [index: string]: string };
+export type Query = { [index: string]: string[] };
 
-export type Middlewares = {
-  req: IncomingMessage;
-  res: ServerResponse;
-  next: (error?: any) => void;
-};
+export type Middleware = (
+  req: Request,
+  res: Response,
+  next: () => Promise<void> | void
+) => Promise<void> | void;
