@@ -1,0 +1,20 @@
+{
+  "name": "amin-express",
+  "version": "1.0.0",
+  "description": "express framework",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc && nodemon dist/index.js",
+    "watch": "tsc -w"
+  },
+  "author": "Amin Ebadi",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
